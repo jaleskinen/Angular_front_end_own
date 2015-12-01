@@ -19,7 +19,6 @@ router.get('/:username',function(req,res){
 //This router handles a request to uri
 //localhost:3000/friends/login
 router.post('/login',function(req,res){
-    
     query.loginFriend(req,res);
 });
 

@@ -13,6 +13,20 @@ main_module.config(function ($routeProvider) {
     $routeProvider.when('/', {
         
         templateUrl: 'partial_login.html',
-        controller:'controllerLogin'
-    });
+        controller: 'controllerLogin'
+    })
+    
+        .when('/persons', {
+        
+            templateUrl: 'partial_persons.html',
+            controller: 'controllerPerson'
+        })
+    
+        .when('/addPerson', {
+        
+            templateUrl: 'partial_addPerson.html',
+            controller: 'controllerAddPerson'
+        })
+    
+        .otherwise({redirectTo: '/'});
 });

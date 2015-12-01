@@ -1,0 +1,13 @@
+<h1>Add new contact info</h1>
+<form>   
+    <h4>Name:</h4>
+    <input type="text" required placeholder="Full name" ng-model ="name"/><br>
+    <h4>Address:</h4>
+    <input type="text"  placeholder="Full address" ng-model ="address" /><br>
+    <h4>Age:</h4>
+    <input type="number" placeholder="Age" ng-model ="age" min="0" /><br><br>
+    <!--<h4>Email:</h4>
+    <input type="text" placeholder="email@com" id ="email" /><br><br>-->
+    <input id ="sendBtn" type="button" class="btn btn-default" value="Add" ng-click='addClicked()'/>
+    <input id ="cancelBtn" Type="button" value="Cancel" class="btn btn-default" onClick="history.go(-1);"/>    
+</form>

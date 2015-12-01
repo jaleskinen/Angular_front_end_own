@@ -133,24 +133,25 @@ exports.registerFriend = function(req,res){
 }
 
 exports.loginFriend = function(req,res){
-    
+
     var searchObject = {
         username:req.body.username,
         password:req.body.password
     }
-    
+            console.log('searchObject: ' + req.body.username);
     db.Friends.find(searchObject,function(err,data){
         
         if(err){
-            
             res.send({status:err.message});
             
         }else{
             //=< 0 means wrong username or password
             if(data.length > 0){
+                console.log('Login status OK ');
                 res.send({status:"Ok"});
             }
             else{
+                console.log('Wrong username or password ');
                 res.send({status:"Wrong username or password"});
             }
             
