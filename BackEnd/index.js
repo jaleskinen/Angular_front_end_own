@@ -25,9 +25,9 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', express.static(path.join(__dirname, '../FrontEnd/views')));
-//app.use('/css', express.static(path.join(__dirname, 'css')));
-//app.use('/lib', express.static(path.join(__dirname, 'lib')));
-//app.use('/controllers', express.static(path.join(__dirname, 'controllers')));
+app.use('/FrontEnd/css', express.static(path.join(__dirname, '../FrontEnd/css')));
+app.use('/FrontEnd/lib', express.static(path.join(__dirname, '../FrontEnd/lib')));
+app.use('/FrontEnd/module', express.static(path.join(__dirname, '../FrontEnd/module')));
 
 app.use('/persons', person);
 app.use('/friends', user);
