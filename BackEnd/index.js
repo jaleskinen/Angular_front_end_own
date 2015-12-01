@@ -4,9 +4,9 @@ var bodyParser = require("body-parser");
 var database = require('./modules/database');
 var queries = require('./modules/queries');
 var person = require('./modules/person');
-var app = express();
 var user = require('./modules/user');
 
+var app = express();
 //============ MIDDLEWARES =================
 // Must be before routers, sometimes also order is fixed
 
@@ -28,6 +28,8 @@ app.use('/', express.static(path.join(__dirname, '../FrontEnd/views')));
 app.use('/FrontEnd/css', express.static(path.join(__dirname, '../FrontEnd/css')));
 app.use('/FrontEnd/lib', express.static(path.join(__dirname, '../FrontEnd/lib')));
 app.use('/FrontEnd/module', express.static(path.join(__dirname, '../FrontEnd/module')));
+app.use('/FrontEnd/controllers',express.static(path.join(__dirname, '../FrontEnd/controllers')));
+app.use('/FrontEnd/factories',express.static(path.join(__dirname, '../FrontEnd/factories')));
 
 app.use('/persons', person);
 app.use('/friends', user);
