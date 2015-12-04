@@ -25,7 +25,13 @@ main_module.config(function ($routeProvider) {
         .when('/addPerson', {
         
             templateUrl: 'partial_addPerson.html',
-            controller: 'controllerAddPerson'
+            controller: 'controllerPerson'
+        })
+    
+        .when('/modifyPerson', {
+        
+            templateUrl: 'partial_modifyPerson.html',
+            controller: 'controllerModify'
         })
     
         .otherwise({redirectTo: '/'});

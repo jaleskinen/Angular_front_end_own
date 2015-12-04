@@ -21,10 +21,17 @@ main_module.controller('controllerLogin',function($scope,loginFactory){
         }
         
         loginFactory.startLogin(temp);
-    }
+    };
     
     $scope.registerClicked = function(){
         
         console.log('register was pressed');
-    }   
+            var requestData = {
+
+        username: $scope.user,
+        password: $scope.pass
+    };
+        
+        loginFactory.startRegister(requestData);
+    };
 });
