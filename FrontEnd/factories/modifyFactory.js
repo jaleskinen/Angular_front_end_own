@@ -1,12 +1,9 @@
 main_module.factory('modifyFactory', function () {
     
-    var savedData = {}
+    var savedData = {};
     
     function set(data) {
-        console.log('modifyFactory: ' + data.length);
         console.log('modifyFactory: ' + data.personname);
-        console.log('modifyFactory: ' + data.personaddress);
-        console.log('modifyFactory: ' + data.personage);
         savedData = data;
     }
  
@@ -17,6 +14,6 @@ main_module.factory('modifyFactory', function () {
     return {
         set: set,
         get: get
-    }
+    };
 
 });
