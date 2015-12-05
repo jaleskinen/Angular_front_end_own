@@ -1,10 +1,10 @@
 
 <h4>Name</h4>
-<input id='name' type='text' value="{{modifyPerson.personname}}"/><br>
+<input id='name' type='text' ng-model= "modifyPerson.personname"/><br>
 <h4>Address</h4>
-<input id='address' type='text' value="{{modifyPerson.personaddress}}"/><br>
+<input id='address' type='text' ng-model= "modifyPerson.personaddress"/><br>
 <h4>Age</h4>
-<input id='age' type='text' value="{{modifyPerson.personage}}"/><br><br>
+<input id='age' type='text' ng-model= "modifyPerson.personage"/><br><br>
 <input type='button' class='btn btn-default' value='Update' ng-click='updateClicked()'/>
 <input type='button' class='btn btn-default' value='Delete' ng-click='deleteClicked()'/>
 <input type='button' class='btn btn-default' value='Cancel' ng-click='cancelClicked()'/>

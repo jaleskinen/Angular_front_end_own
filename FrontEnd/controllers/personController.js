@@ -37,12 +37,13 @@ main_module.controller('controllerPerson',function($scope, $http, personFactory,
         console.log('modify Clicked: ');
         
         var temp = {
+            personid:$scope.persons[index]._id,
             personname:$scope.persons[index].name,
             personaddress:$scope.persons[index].address,
             personage:$scope.persons[index].age
         }
         
-        console.log('temp: ' + temp.personname + temp.personaddress + temp.personage);
+        console.log('temp: ' + temp.personid + temp.personname + temp.personaddress + temp.personage);
         /*personFactory.modifyPerson(temp);*/
         modifyFactory.set(temp);
         window.location.href = "#/modifyPerson";
@@ -67,15 +68,11 @@ main_module.controller('controllerPerson',function($scope, $http, personFactory,
     
     //This is called when searchClicked
     $scope.searchClicked = function () {
-        
         console.log('search Clicked');
-        
-        var temp = {
-            searchText:$scope.search,
-        }
-
-        personFactory.searchPerson(temp);
-        
+        $http.get('http://localhost:3000/persons/name=' + $scope.search + '/username=' + localStorage.username)
+        .success(function(persons){
+            $scope.persons = persons;
+        });
     };
     
     //This is called when updateClicked

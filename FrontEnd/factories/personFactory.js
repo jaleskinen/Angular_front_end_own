@@ -1,4 +1,4 @@
-main_module.factory('personFactory', function (modifyFactory) {
+main_module.factory('personFactory', function (modifyFactory, $http) {
     
     var factory = {};
     
@@ -13,6 +13,12 @@ main_module.factory('personFactory', function (modifyFactory) {
     
     factory.addNewPerson = function (data) {
         console.log('personFactory.js addNewPerson data: ' + data.personname);
+        /*$http.post('http://localhost:3000/persons', data)
+        .success(function(persons){
+            window.location.href = "#/persons";
+        });
+        */
+        
         $.ajax({
             method: 'POST',
             url: 'http://localhost:3000/persons',
@@ -34,16 +40,17 @@ main_module.factory('personFactory', function (modifyFactory) {
         window.location.href = "#/modifyPerson";
     };
     
-    factory.searchPerson = function (data) {
-        console.log('personFactory.js searchPerson data: ' + data.searchText);
-        window.location.href = "#/persons";
-    };
-    
     
     factory.updatePerson = function (data) {
         console.log('personFactory.js: update');
         
-        $.ajax({
+        $http.put('http://localhost:3000/persons' + localStorage.username)
+        .success(function(persons){
+            console.log("update response received");
+            window.location.href = "#/persons";
+        });
+        
+        /*$.ajax({
             method: 'PUT',
             url: 'http://localhost:3000/persons',
             data: data,
@@ -51,7 +58,7 @@ main_module.factory('personFactory', function (modifyFactory) {
         }).done(function (data) {
             console.log("update response received");
             window.location.href = "#/persons";
-        }); 
+        }); */
     };
     
     factory.cancelPerson = function () {
