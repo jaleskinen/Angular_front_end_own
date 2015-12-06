@@ -1,13 +1,13 @@
 <div class="loginbody_container">
-    <h1 class="about">Ankkalinna</h1>
+    <h1 class="about">Angular - {{loginPerson}}</h1>
     <h2>Add new contact info</h2>
     <form>   
         <h4>Name:</h4>
-        <input type="text" required placeholder="Full name" ng-model="name"/><br>
+        <input type="text" class="form-control text-left" style = "width:250px" required placeholder="Full name" ng-model="name"/><br>
         <h4>Address:</h4>
-        <input type="text"  placeholder="Full address" ng-model="address" /><br>
+        <input type="text"  class="form-control text-left" style = "width:250px" placeholder="Full address" ng-model="address" /><br>
         <h4>Age:</h4>
-        <input type="number" placeholder="Age" min="0" ng-model="age" /><br><br>
+        <input type="number" class="form-control text-left" style = "width:80px" placeholder="Age" min="0" ng-model="age" /><br><br>
         <input type="button" class="btn btn-default" value="Add" ng-click='addClicked()'/>
         <input type="button" class="btn btn-default" value="Cancel" ng-click='cancelClicked()'/>    
     </form>

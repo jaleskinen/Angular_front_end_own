@@ -14,7 +14,6 @@ main_module.controller('controllerLogin', function ($scope, loginFactory) {
     $scope.loginClicked = function () {
         
         console.log('login was pressed');
-        
         var temp = {
             username: $scope.user,
             password: $scope.pass
@@ -34,4 +33,5 @@ main_module.controller('controllerLogin', function ($scope, loginFactory) {
         
         loginFactory.startRegister(requestData);
     };
+
 });

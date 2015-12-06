@@ -2,9 +2,9 @@
     <nav id="head"></nav>
     <section>
         <div>
-            <h1 class="about">Ankkalinna</h1>
+            <h1 class="about">Angular - {{loginPerson}}</h1>
             <div class="col-md-4">
-                <input type="text" class="form-control" placeholder="Search by Name" ng-model="search"/>
+                <input type="text" class="form-control" style = "width:250px" placeholder="Search by Name" ng-model="search"/><br>
                 <input type="button" class="btn btn-default" value="Search" ng-click='searchClicked()'/>
                 <input type="button" class="btn btn-default" value="Show all" ng-click='showAllClicked()'/><br>
             </div>
@@ -22,7 +22,7 @@
                     <td>{{person.name}}</td>
                     <td>{{person.address}}</td>
                     <td>{{person.age}}</td>
-                    <td><input type='button' value='Modify' ng-click='modifyClicked($index)'/></td>
+                    <td><input type='button' class="btn btn-default btn-sm" value='Modify' ng-click='modifyClicked($index)'/></td>
                   </tr>
                 </tbody>
               </table>

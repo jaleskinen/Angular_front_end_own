@@ -41,6 +41,7 @@ main_module.factory('loginFactory', function () {
         } else {
             
             console.log('Login status was NOT ok');
+            alert('Wrong username or password');
             $("#status").text(data.status);
         }
     }

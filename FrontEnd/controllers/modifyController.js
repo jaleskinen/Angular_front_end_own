@@ -2,6 +2,7 @@ main_module.controller('controllerModify', function ($scope, $http, modifyFactor
     
     
     $scope.modifyPerson = modifyFactory.get();
+    $scope.loginPerson = localStorage.username;
     
     //This is called when modifyPerson/updateClicked
     $scope.updateClicked = function () {

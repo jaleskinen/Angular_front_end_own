@@ -10,12 +10,20 @@ footer{
 }
 
 h3{   
- text-align: center;   
+    text-align: center;   
 }
 
-/*use class selector to define style for elements. Note: always start with a dot (.) !!*/
-.mun_keksima{
-    background-color: red;  
+h2{   
+    text-decoration: underline;  
+}
+
+thead{   
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+tbody{   
+    font-size: 14px;
 }
 
 .about{
@@ -33,7 +41,7 @@ h3{
     margin: 18px auto;
     border: 2px solid black;
     border-radius: 15px;
-    background: linear-gradient(to right, rgba(0,0,255,0), rgba(0,0,255,0.5));
+    background: linear-gradient(to right, rgba(0,0,255,0.2), rgba(0,0,255,0.5));
     padding: 8px;
 }
 
@@ -41,30 +49,9 @@ h3{
 {
     font-size: 12px;
     color: blue;
-    width: 1500px;
+    /*width: 1000px;*/
     margin: 18px auto;
-    background: linear-gradient(to right, rgba(0,0,255,0), rgba(0,0,255,0.5));
-    padding: 18px;
-
+    border-radius: 25px;
+    background: linear-gradient(to right, rgba(0,0,255,0.2), rgba(0,0,255,0.5));
+    padding: 20px;
 }
-
-/*itse määritelty class tyyli*/
-.fancy{
-    color: red;
-    border: 2px;
-    background-color: blue;
-    border: 4px;
-    border-style: solid;
-    border-radius: 8px;
-    background-color: coral;
-}
-
-/*use id selector to define style*/
-/*itse määritelty id selector. Ohje: käytä vain yhdessä elementissä HTML dokumentissa*/
-#joku_tyyli{
-    margin: 100px;
-}
-/*
-p:hover{
-  background-color: green;   
-} */

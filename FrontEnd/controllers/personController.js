@@ -5,7 +5,9 @@ main_module.controller('controllerPerson', function ($scope, $http, personFactor
             $scope.persons = persons;
         });
     
-     //This is called when searchClicked
+    $scope.loginPerson = localStorage.username;
+    
+    //This is called when searchClicked
     $scope.searchClicked = function () {
         console.log('Search Clicked');
         $http.get('http://localhost:3000/persons/name=' + $scope.search + '/username=' + localStorage.username)
@@ -13,13 +15,14 @@ main_module.controller('controllerPerson', function ($scope, $http, personFactor
                 $scope.persons = persons;
             });
     };
-    
+
+    //This is called when showAllClicked
     $scope.showAllClicked = function () {
         console.log('Show All Clicked');
         window.location.reload();
     };
     
-    //This is called when addPersonClicked
+    //This is called when persons/addPersonClicked
     $scope.addPersonClicked = function () {
         console.log('addperson Clicked');
         window.location.href = "#/addPerson";
